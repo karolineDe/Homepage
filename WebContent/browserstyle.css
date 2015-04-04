@@ -1,0 +1,77 @@
+@CHARSET "ISO-8859-1";
+
+
+header{
+	font-family: verdana, sans-serif;
+	background-color:#33CCFF;
+	color:black;
+	text-align:center;
+	padding:10px 10px 20px 10px;
+	border: 1px black solid;
+	
+}
+
+#shadow{
+	background-image:url(http://gaestebuch.007box.de/bilder/schatten1.gif);
+	background-repeat-x:repeat;
+	background-repeat-y:no-repeat;
+	height:5px;
+}
+
+nav{
+	font-family: verdana, sans-serif;
+	line-height: 30px;
+	background-color:#99FFFF;
+	height: 1150px;
+	widht: 100px;
+	float: left;
+	padding:20px;
+	border: 1px black solid;
+	top:20;
+	left:1;
+} 	
+
+section{
+	font-family: verdana, sans-serif;
+	width: 700px;
+	float: left;
+	padding: 50px;
+	margin: 10px 50px 0 20px;
+}
+
+submenu{
+	font-size: 18px;
+}
+
+table.points{
+	font-size: 16px;
+}
+
+#icon{
+	width:20px;
+	height:20px;
+	margin-bottom:-5px;
+	padding: 0 10px 0 0px;
+}
+
+#fhvLogo{
+	width: 212px; 
+	height: 125px;
+}
+
+#guestbook{
+	height:1000px;
+	width:900px;
+	border:0;
+	frameborder:0;
+	margin-top: 5px;
+	overflow:auto;
+	padding: 0 0 0 10px;	
+}
+#innerNav{
+	padding:0 0 0 20px;
+}
+#entry{
+	width:700px;
+	
+}

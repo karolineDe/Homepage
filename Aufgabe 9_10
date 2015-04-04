@@ -1,0 +1,41 @@
+Aufgabe 9:
+
+Entwickeln Sie ein Skript in JavaScript, das aus einer HTML-Datei heraus ein neues
+Browserfenster (Popup-Window) öffnet und dort hinein (per JavaScript-Anweisung)
+eine Grafikdatei (GIF, JPG, PNG) lädt und anzeigt. Höhe und Breite des Fensters
+sollen sich dynamisch nach der Größe der Grafik richten. Am Rand des Bildes soll
+ein JavaScript-Link (oder Button) zum Schließen des Fensters eingerichtet werden.
+Hinweis : Auf die Maße eines Bildes kann erst zugegriffen werden, nachdem es
+geladen ist!
+
+Aufgabe 10:
+
+Erweitern Sie Ihre Punktekonten-Web-Site um ein Gästebuch, in dem Benutzer
+Kommentare zu Ihrer Web-Site hinterlassen können. Die Einträge sollen in einer
+Datenbank verwaltet werden und sollen bei Besuch des Gästebuchs auf einer
+separaten Gästebuch-Seite zusammengestellt und angezeigt werden. Neue
+Einträge sollen über ein (statisches) HTML-Formular eingegeben werden können,
+wobei mindestens Felder für den Namen des Benutzers, seine E-Mail-Adresse und
+ein mehrzeiliges Kommentarfeld vorzusehen sind.
+Das Gästebuch soll über einen Link auf der Navigationsleiste aufgerufen werden
+können. Der Aufruf des Formulars zum Erstellen eines neuen Gästebuch-Eintrags
+soll aus der Gästebuch-Seite heraus erfolgen können.
+Implementieren Sie die Lösung mit einem Servlet, das per JDBC (oder Hibernate)
+auf die Datenbank zugreift. Als DBMS stehen Ihnen MySQL auf Ihrem Home-Share
+unter users2.fh-vorarlberg.ac.at zur Verfügung oder die ORACLE-Datenbank auf
+dem ORACLE-Server der FHV. Wenn Sie sich für den Einsatz einer ORACLEDatenbank
+auf dem ORACLE-Server der FHV entscheiden sollten, beachten Sie
+bitte, dass zum Zugriff auf die Datenbank die Installation der JDBC-Treiber
+(classes12.jar) im CLASSPATH erforderlich ist.
+Hinweis : Das Passwort der MySQL-DB auf Ihrem Home-Share unter users2.fhvorarlberg.
+ac.at ist normalerweise nicht identisch mit Ihrem Domain-
+Passwort!
+Dokumentieren Sie, welchen Web-Container Sie einsetzen und das Deployment
+ihrer Web-Applikation darauf.
+Neben dem Source-Code und der Dokumentation reichen Sie bitte ein deploybares
+WAR-File zusammen mit Ihrer Lösung ein.
+Die Aufgabe wird in den folgenden Übungsblättern fortgesetzt.
+
+-----------------------------------------------------------------------------------
+
+Servlet-Container --> Tomcat

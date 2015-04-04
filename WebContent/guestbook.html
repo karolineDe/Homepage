@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" type="text/css" media="screen" href="browserstyle.css">
+<link rel="stylesheet" type="text/css" media="print" href="printerstyle.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<title>FHV - Gästebuch</title>
+</head>
+
+<header>
+		<h1>FHV - Gästebuch</h1>
+</header>
+
+<body>
+	<div id="shadow"></div>
+	<!--vertikales menü -->
+	<nav>
+		<img id="fhvLogo" alt="FHV Logo" src="Images/FHV_Pos_148x148_VUOAS_300dpi.png">
+		<h3>Sommersemester<br> 2015</h3>
+		<div id="shadow"></div><br>
+		<ul class="submenu">	
+			<li><a href="index.html" title="Übersicht">Übersicht</a></li>
+			<li><a href="coursesItb2.html" title="ITB2">ITB 2</a></li>
+			<li><a href="coursesItb4.html" title="ITB4">ITB 4</a></li>
+		</ul>
+		<div id="shadow"></div>
+		<br>
+		<div id="innerNav">
+			<p><a href="registrierung.html" title="registrierung">Registrierung</a></p>
+			<p><a href="photos.html">Photos</a></p>
+			<p><a href="guestbook.html">Gästebuch</a></p>
+			<p><a href="mailto:kdeuring@gmail.com"><img id="icon" src="Images/icon_brief_0.png"  name="Email an Administrator"></img>Kontakt</a></p>
+		</div>
+	</nav>
+	<section>
+		<article>
+			<h1>Gästebucheinträge:</h1><p><a href="guestbookEntry.html" title="new Entry">Neuer Eintrag</a></p>
+			<iframe id="guestbook" src="http://localhost:8080/UE5Guestbook/Guestbook"></iframe>
+		</article>
+	</section>
+</body>
+</html>

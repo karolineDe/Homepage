@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Registrierung</title>
+	<link rel="stylesheet" type="text/css" media="screen" href="browserstyle.css">
+	<link rel="stylesheet" type="text/css" media="print" href="printerstyle.css">
+	<meta http-equiv="language" content="deutsch,de">
+	<meta name="keywords" content="Registrierung, Fachhochschule Vorarlberg, Studentenpunktekonto">
+	<meta name="description" content="Registrierung für das Studentenpunktekonto der Fachhochschule Vorarlberg">
+	<meta name="robots" content="index,follow">
+	<meta name="audience" content="studenten">
+	<meta name="page-topic" content="Hochschule">
+	<meta name="revisit-after" content="7 days">
+</head>
+
+<header>
+	<h1 style="color:red">Registrierung</h1>
+	<p id="reg"><a href="index.html" title="registrierung">zurück zur Übersicht</a></p>
+</header>
+<body>
+	<script type="text/javascript" src="formularCheck.js"></script>
+	
+	<div id="shadow"></div>
+	<!--vertikales menü -->
+	<nav>
+		<img id="fhvLogo" alt="FHV Logo" src="Images/FHV_Pos_148x148_VUOAS_300dpi.png">
+		<h3>Sommersemester<br> 2015</h3>
+		<div id="shadow"></div><br>
+		<ul class="submenu">
+			<li><a href="index.html" title="Übersicht">Übersicht</a></li>
+			<li><a href="coursesItb2.html" title="ITB2">ITB 2</a></li>
+			<li><a href="coursesItb4.html" title="ITB4">ITB 4</a></li>
+		</ul>
+		<div id="shadow"></div>
+		<br>
+		<div id="innerNav">
+			<p><a href="registrierung.html" title="registrierung">Registrierung</a></p>
+			<p><a href="photos.html">Photos</a></p>
+			<p><a href="guestbook.html">Guestbook</a></p>
+			<p><a href="mailto:kdeuring@gmail.com"><img id="icon" src="Images/icon_brief_0.png"  name="Email an Administrator"></img>Kontakt</a></p>
+		</div>
+	</nav>
+	
+	<!-- textueller inhalt -->
+	<section>
+		<form name="Registrierung" action="mailto:kdeuring@gmail.com" method="post"
+		onsubmit="return checkFormular()" enctype="text/plain">
+			<pre>
+				Vorname:	<input type="text" size="53" name="Vorname">
+				
+				Nachname:	<input type="text" size="53" name="Nachname">
+				
+				Adresse:	<textarea rows="5" cols="40" name="Adresse"></textarea>
+				
+				Herkunftsland:	<select name="land">
+									<option selected>Bitte wählen</option>
+									<option>Österreich</option>
+									<option>Deutschland</option>
+									<option>Schweiz</option>
+									<option>Andere</option>
+								</select>
+								
+				User-ID:	<input type="text" size="53" name="UserID">
+				
+				Passwort:	<input type="password" size="53" name="Passwort1">
+				
+				Bestätigen Sie 
+				Ihr Passwort:	<input type="password" size="53" name="Passwort2">
+				
+				Geschlecht:	<input checked type="radio" name="Geschlecht" value="w" id="geschlecht">Weiblich
+						<input type="radio" name="Geschlecht" value="m" id="geschlecht">Männlich
+				
+				Studiengang:	<select name="studiengang">
+									<option selected>Bitte wählen</option>
+									<option>ITB 1</option>
+									<option>ITB 2</option>
+									<option>ITB 3</option>
+									<option>ITB 4</option>
+									<option>ITB 5</option>
+									<option>ITB 6</option>
+								</select>	
+									
+				Studienjahr:	<input checked type="radio" name="Studienjahr" value="2013">2013
+						<input type="radio" name="Studienjahr" value="2014">2014
+						<input type="radio" name="Studienjahr" value="2015">2015
+						
+				Berechtigungs- 
+				stufen:		<input type="checkbox" name="Dozent">Dozent	
+						<input type="checkbox" name="Student">Student
+						<input type="checkbox" name="Admin">Admin
+								
+				E-Mail:		<input type="email" size="53" name="email"> 
+				
+				
+							<input type="reset" value="Reset Form">		<input type="submit" value="Submit">
+			</pre>
+		</form>
+	</section>
+</body>
+</html>
