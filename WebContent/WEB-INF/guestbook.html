@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Guestbook</title>
+		<script type="text/javascript" src="jquery-2.1.3.min.js"></script>
+		<link rel="stylesheet" type="text/css" media="screen" href="stylesheet/browserstyle.css">
+		<link rel="stylesheet" type="text/css" media="print" href="stylesheet/printerstyle.css">
+	</head>
+	<header>
+		<h1>FHV - Gästebuch</h1>
+	</header>
+	<body>
+		<div id="shadow"></div>
+		<!--vertikales menü -->
+		<nav>
+			<img id="fhvLogo" alt="FHV Logo" title="FHV-Logo" src="images/FHV_LOGO.png">
+			<h3>Sommersemester<br> 2015</h3>
+			<div id="shadow"></div><br>
+			<ul class="submenu">
+				<li><a href="index.html" title="Übersicht">Übersicht</a></li>
+				<li><a href="coursesItb2.html" title="ITB2">ITB 2</a></li>
+				<li><a href="coursesItb4.html" title="ITB4">ITB 4</a></li>
+			</ul>
+			<div id="shadow"></div>
+			<br>
+			<div id="innerNav">
+				<p><a href="registrierung.html" title="registrierung">Registrierung</a></p>
+				<p><a href="photos.html">Photos</a></p>
+				<p><a href="guestbook.html">Gästebuch</a></p>
+				<p><a href="mailto:kdeuring@gmail.com"><img id="icon" src="images/icon_brief_0.png"  name="Email an Administrator"></img>Kontakt</a></p>
+			</div>
+		</nav>
+		
+		<!-- textueller inhalt -->
+		<section>
+			<form enctype="text/plain" id="form">
+				<table>
+					<tr>
+						<td>Name</td>
+						<td><input type="text" name="name"></input></td>
+					</tr>
+					<tr>
+						<td>E-Mail</td>
+						<td><input type="text" name="email"></input></td>
+					</tr>
+					<tr>
+						<td>Comment</td>
+						<td><textarea name="comment" rows="4" cols="30"></textarea></td>
+					</tr>
+				</table>
+				<input type="submit" id="submit" value="Submit">
+				<input type="reset" id="reset" value="Reset">
+			</form>
+			<iframe id="guestbook" src="http://localhost:8080/UE5/GuestBook" width="800" height="1000" frameborder="0"></iframe>
+		</section>
+		<script>
+		$(document).ready(function(){
+			$('#submit').click(function(e){
+				e.preventDefault();
+				validateForm();
+			});
+
+			function validateForm(){
+				var emailRegEx = /^[A-Za-z][\w-]+[\.]?[\w-]*@([\w-]+\.)+[\w-]+$/;
+				
+				var name = $("input[name='name']");
+				var comment = $("textarea[name='comment']");
+				var email = $("input[name='email']");
+				
+				$('.error').remove();
+				error = false;
+				
+				// Textfelder dürfen nicht leer sein
+				if(name.val() == ""){
+					name.after('<span class="error"><br /> Please enter your name!</span>');
+					if(!error){
+						name.focus();
+					}
+					error = true;
+				}
+				if(comment.val() == ""){
+					comment.after('<span class="error"><br /> Please enter your comment!</span>');
+					if(!error){
+						comment.focus();
+					}
+					error = true;
+				}
+				if(email.val() == ""){
+					email.after('<span class="error"><br /> Please enter your email!</span>');
+					if(!error){
+						email.focus();
+					}
+					error = true;
+				}
+				
+				// Email
+				if(!emailRegEx.test(email.val()) && email.val() != ""){
+					email.after('<span class="error"><br /> Not a valid email address!</span>');
+					if(!error){
+						email.focus();
+					}
+					error = true;
+				}
+				
+				if(!error){
+					$('#guestbook').attr("src", "http://localhost:8080/UE5/GuestBook?name=" + name.val() + "&email=" + email.val() + "&comment=" + comment.val());
+					alert("Thank you for your guestbook entry!");
+					$("form#form")[0].reset();
+					$('#guestbook').attr("src", "http://localhost:8080/UE5/GuestBook");
+				}
+			}
+			
+			$('#reset').click(function(){
+				resetForm();   
+			});
+			
+			function resetForm(){
+				$('.error').remove();
+			}
+		});
+		</script>
+	</body>
+</html>
