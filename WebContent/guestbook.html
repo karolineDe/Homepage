@@ -38,21 +38,24 @@
 				<table>
 					<tr>
 						<td>Name</td>
-						<td><input type="text" name="name"></input></td>
+						<td><input type="text" size="40" name="name"></input></td>
 					</tr>
 					<tr>
 						<td>E-Mail</td>
-						<td><input type="text" name="email"></input></td>
+						<td><input type="text" size="40" name="email"></input></td>
 					</tr>
 					<tr>
 						<td>Comment</td>
 						<td><textarea name="comment" rows="4" cols="30"></textarea></td>
 					</tr>
 				</table>
+				<br>
 				<input type="submit" id="submit" value="Submit">
 				<input type="reset" id="reset" value="Reset">
+				<br>
 			</form>
-			<iframe id="guestbook" src="http://localhost:8080/UE5/GuestBook" width="800" height="1000" frameborder="0"></iframe>
+			<p>____________________________________________________________________</p>
+			<iframe id="guestbook" src="http://localhost:8080/Homepage/GuestBook" width="800" height="1000" frameborder="0"></iframe>
 		</section>
 		<script>
 		$(document).ready(function(){
@@ -104,10 +107,10 @@
 				}
 				
 				if(!error){
-					$('#guestbook').attr("src", "http://localhost:8080/UE5/GuestBook?name=" + name.val() + "&email=" + email.val() + "&comment=" + comment.val());
+					$('#guestbook').attr("src", "http://localhost:8080/Homepage/GuestBook?name=" + name.val() + "&email=" + email.val() + "&comment=" + comment.val());
 					alert("Thank you for your guestbook entry!");
 					$("form#form")[0].reset();
-					$('#guestbook').attr("src", "http://localhost:8080/UE5/GuestBook");
+					$('#guestbook').attr("src", "http://localhost:8080/Homepage/GuestBook");
 				}
 			}
 			
