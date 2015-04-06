@@ -2,10 +2,6 @@
 <html>
 	<head>
 		<meta charset="ISO-8859-1">
-		<link rel="stylesheet" type="text/css" media="screen" href="stylesheet/browserstyle.css">
-		<link rel="stylesheet" type="text/css" media="print" href="stylesheet/printerstyle.css">
-		<script type="text/javascript" src="jquery-2.1.3.min.js"></script>
-		<title>ITB 4 - Nutzerzentrierte Softwareentwicklung</title>
 		<meta http-equiv="language" content="deutsch,de">
 		<meta name="keywords" content="FHV, Fachhochschule Vorarlberg, Studentenpunktekonto">
 		<meta name="description" content="Studentenpunktekonto der Fachhochschule Vorarlberg">
@@ -13,6 +9,18 @@
 		<meta name="audience" content="studenten">
 		<meta name="page-topic" content="Hochschule">
 		<meta name="revisit-after" content="7 days">
+		
+		<link rel="stylesheet" type="text/css" media="screen" href="stylesheet/browserstyle.css">
+		<link rel="stylesheet" type="text/css" media="print" href="stylesheet/printerstyle.css">
+		
+		<script type="text/javascript" src="jquery-2.1.3.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				setCookie();
+			});
+		</script>
+		
+		<title>ITB 4 - Nutzerzentrierte Softwareentwicklung</title>
 	</head>
 	<header>
 		<h1>Willkommen zum FHV - Studentenpunktekonto</h1>
