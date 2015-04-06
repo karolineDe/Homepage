@@ -1,66 +1,66 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="ISO-8859-1">
-	<title>Photos</title>
-	<link rel="stylesheet" type="text/css" media="screen" href="stylesheet/browserstyle.css">
-	<link rel="stylesheet" type="text/css" media="print" href="stylesheet/printerstyle.css">
-	<script type="text/javascript" src="jquery-2.1.3.min.js"></script>
-</head>
-<header>
-		<h1>Willkommen zum FHV - Studentenpunktekonto</h1>
-</header>
-<body>
-	<div id="shadow"></div>
-		<!--vertikales menü -->
-		<nav>
-			<img id="fhvLogo" alt="FHV Logo" src="images/FHV_LOGO.png" title="FHV-Logo">
-			<h3>Sommersemester<br> 2015</h3>
-			<div id="shadow"></div><br>
-			<ul class="submenu">
-				<li><a href="index.html" title="Übersicht">Übersicht</a></li>
-				<li><a href="coursesItb2.html" title="ITB2">ITB 2</a></li>
-				<li><a href="coursesItb4.html" title="ITB4">ITB 4</a></li>
-			</ul>
-			<div id="shadow"></div>
-			<br>
-			<div id="innerNav">
-				<p><a href="registrierung.html" title="registrierung">Registrierung</a></p>
-				<p><a href="photos.html">Photos</a></p>
-				<p><a href="guestbook.html">Gästebuch</a></p>
-				<p><a href="mailto:kdeuring@gmail.com"><img id="icon" src="images/icon_brief_0.png"  title="Email an Administrator"></img>Kontakt</a></p>
-			</div>
-		</nav>
-		
-	<!-- textueller inhalt -->
-	<section>
-		<article>
-			<h2>Bildergalerie:</h2>
-				<a href="javascript:fOpenImg('images/FHV_LOGO.png')"><img src="images/FHV_LOGO.png" title="FHV-Logo" height="100px"></img></a>&nbsp;
-				<a href="javascript:fOpenImg('images/pic1.jpeg')"><img src="images/pic1.jpeg" title="FHV Haupteingang" height="100px"></img></a>&nbsp;
-				<a href="javascript:fOpenImg('images/FHV_Foyer.jpg')"><img src="images/FHV_Foyer.jpg" title="FHV-Foyer" height="100px"></img></a>&nbsp;
-				<a href="javascript:fOpenImg('images/BolterRegine.jpg')"><img src="images/BolterRegine.jpg" title="Studiengangsleiterin Informatik" height="100px"></img></a>&nbsp;
-				<a href="javascript:fOpenImg('images/pic2.jpg')"><img src="images/pic2.jpg" title="FHV Haupteingang" height="100px"></img></a>
-		</article>
-		
-		<script type="text/javascript">
-			function fOpenImg(url)
-			{
-				img = new Image();
-				img.src = url;
-				
-				sbreite = screen.availWidth;
-			    shoehe = screen.availHeight;
-			 
-			    x = (sbreite - img.width)/ 2;
-			    y = (shoehe - img.height)/ 2;
-			 
-				var popUp = window.open("","Photo Viewer","top=" + y +",left=" + x + ",screenX="+x+",screenY="+y+",resizable=1,height="+(img.height+40)+",width="+(img.width+20));
-				popUp.document.write("<a href='javascript:window.close()'>close</a><img src='" + url + "'></img>");
-				
-			    popUp.focus();
-			}
-		</script>
-	</section>
-</body>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Photos</title>
+		<link rel="stylesheet" type="text/css" media="screen" href="stylesheet/browserstyle.css">
+		<link rel="stylesheet" type="text/css" media="print" href="stylesheet/printerstyle.css">
+		<script type="text/javascript" src="jquery-2.1.3.min.js"></script>
+	</head>
+	<header>
+			<h1>Willkommen zum FHV - Studentenpunktekonto</h1>
+	</header>
+	<body>
+		<div id="shadow"></div>
+			<!--vertikales menü -->
+			<nav>
+				<img id="fhvLogo" alt="FHV Logo" src="images/FHV_LOGO.png" title="FHV-Logo">
+				<h3>Sommersemester<br> 2015</h3>
+				<div id="shadow"></div><br>
+				<ul class="submenu">
+					<li><a href="index.html" title="Übersicht">Übersicht</a></li>
+					<li><a href="coursesItb2.html" title="ITB2">ITB 2</a></li>
+					<li><a href="coursesItb4.html" title="ITB4">ITB 4</a></li>
+				</ul>
+				<div id="shadow"></div>
+				<br>
+				<div id="innerNav">
+					<p><a href="registrierung.html" title="registrierung">Registrierung</a></p>
+					<p><a href="photos.html">Photos</a></p>
+					<p><a href="guestbook.html">Gästebuch</a></p>
+					<p><a href="mailto:kdeuring@gmail.com"><img id="icon" src="images/icon_brief_0.png"  title="Email an Administrator"></img>Kontakt</a></p>
+				</div>
+			</nav>
+			
+		<!-- textueller inhalt -->
+		<section>
+			<article>
+				<h2>Bildergalerie:</h2>
+					<a href="javascript:fOpenImg('images/FHV_LOGO.png')"><img src="images/FHV_LOGO.png" title="FHV-Logo" height="100px"></img></a>&nbsp;
+					<a href="javascript:fOpenImg('images/pic1.jpeg')"><img src="images/pic1.jpeg" title="FHV Haupteingang" height="100px"></img></a>&nbsp;
+					<a href="javascript:fOpenImg('images/FHV_Foyer.jpg')"><img src="images/FHV_Foyer.jpg" title="FHV-Foyer" height="100px"></img></a>&nbsp;
+					<a href="javascript:fOpenImg('images/BolterRegine.jpg')"><img src="images/BolterRegine.jpg" title="Studiengangsleiterin Informatik" height="100px"></img></a>&nbsp;
+					<a href="javascript:fOpenImg('images/pic2.jpg')"><img src="images/pic2.jpg" title="FHV Haupteingang" height="100px"></img></a>
+			</article>
+			
+			<script type="text/javascript">
+				function fOpenImg(url)
+				{
+					img = new Image();
+					img.src = url;
+					
+					sbreite = screen.availWidth;
+				    shoehe = screen.availHeight;
+				 
+				    x = (sbreite - img.width)/ 2;
+				    y = (shoehe - img.height)/ 2;
+				 
+					var popUp = window.open("","Photo Viewer","top=" + y +",left=" + x + ",screenX="+x+",screenY="+y+",resizable=1,height="+(img.height+40)+",width="+(img.width+20));
+					popUp.document.write("<a href='javascript:window.close()'>close</a><img src='" + url + "'></img>");
+					
+				    popUp.focus();
+				}
+			</script>
+		</section>
+	</body>
 </html>
