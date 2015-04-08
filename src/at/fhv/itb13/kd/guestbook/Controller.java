@@ -39,7 +39,7 @@ public class Controller extends HttpServlet {
 				return;
 			}
 		}
-		response.sendRedirect(response.encodeRedirectURL("index2.html"));
+		response.sendRedirect(response.encodeRedirectURL("index.html"));
 	}
 
 	/**
